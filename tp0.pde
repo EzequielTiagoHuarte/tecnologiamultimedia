@@ -10,13 +10,11 @@ void draw() {
   fill(#030303); //primera capa  
   ellipse(400, 400, 550, 550); 
 
-  fill(#F7F014); //primera capa 
-  //triangulos 1
+  fill(#F7F014); //triangulos 1
   triangle(200, 200, 300, 400, 400, 300);
   triangle(200, 600, 300, 400, 400, 500);
   triangle(600, 200, 400, 300, 500, 400);
   triangle(600, 600, 400, 500, 500, 400);
-
 
   //triagulos 2
   triangle(400, 100, 300, 300, 500, 300);
@@ -30,16 +28,16 @@ void draw() {
   fill(#F7F014); //circulo central 2
   ellipse(400, 400, 250, 250);
 
-  fill(#030303); //primera capa 
+  fill(#030303); //circulo central 3
   ellipse(400, 400, 200, 200);
 
-  fill(#F7F014); //circulo central 3
+  fill(#F7F014); //circulo central 4
   ellipse(400, 400, 150, 150);
 
-  fill(#030303); //primera capa 
+  fill(#030303); //circulo central 5
   ellipse(400, 400, 100, 100);
 
-  fill(#F7F014); //circulo central 4
+  fill(#F7F014); //circulo central 6
   ellipse(400, 400, 50, 50);
 
   fill(#030303); //circulo en la punta del triangulo 1
