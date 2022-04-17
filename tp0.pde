@@ -52,7 +52,6 @@ void draw() {
   ellipse(600, 400, 25, 25);
   ellipse(400, 600, 25, 25);
 
-
   fill(#F7F014); //circulo de la esquina 1
   ellipse(50, 50, 75, 75);
   ellipse(750, 50, 75, 75);
