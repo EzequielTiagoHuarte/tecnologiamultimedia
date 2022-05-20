@@ -3,9 +3,7 @@
 //Comisión 1
 //IMPORTANTE, UNA VEZ QUE ARRANQUEN LOS CREDITOS TOQUE CUALQUIER TECLA PARA REINICIAR, NO SE PORQUE MOTIVO AL INICIAR SE DESORDENA TODO, UNA VEZ QUE LO REINICIE SE VA A ACOMODAR
 PImage fondo2do;
-PImage fondo;
 PImage fondo3es;
-PImage fondos;
 PImage personitas5;
 PImage titulo; 
 PImage joseph; 
