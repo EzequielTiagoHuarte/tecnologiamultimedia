@@ -1,6 +1,7 @@
 //tp1
 //Ezequiel Tiago Huarte
 //Comisión 1
+//IMPORTANTE, UNA VEZ QUE ARRANQUEN LOS CREDITOS TOQUE CUALQUIER TECLA PARA REINICIAR, NO SE PORQUE MOTIVO AL INICIAR SE DESORDENA TODO, UNA VEZ QUE LO REINICIE SE VA A ACOMODAR
 PImage rf;
 PImage fondo2do;
 PImage fondo;
@@ -137,6 +138,7 @@ posY16+=v2;
 if (posY16 <= 0){
   //image(personitas,0,0);
   image(personitas5,0,0);
+  fill(random(160, 225));
 text("Presiona cualquier tecla para reiniciar",80, 300);
 }
  movimiento = frameCount;
