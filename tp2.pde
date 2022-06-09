@@ -1,6 +1,7 @@
-//tp2
-//Ezequiel Tiago Huarte
-//Comision 1
+// tp2
+// Ezequiel Tiago Huarte
+// Comision 1
+// https://youtu.be/RKG1WZScEXA
 color c1,c2;
 void setup(){
   size (800,800);
