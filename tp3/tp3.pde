@@ -139,3 +139,14 @@ line(250,0,250,500);
 noFill();
 ellipse(250,250,100,100);
 }
+{
+if (keyPressed){ 
+    if(key=='r')
+  if(estado == 0 || estado == 6 ){ 
+dirXpel = 1;
+dirYpel = 1;
+  vel = 2;
+  marcador = 0;
+  }
+ }
+}
