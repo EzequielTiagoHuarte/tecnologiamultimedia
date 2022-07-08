@@ -1,20 +1,15 @@
-//declaramos las variables
-//paleta1
 int posXp1 = 10;
 int posYp1 = 225;
 int sizeP1 = 75;
-//paleta2
 int posXp2 = 480;
 int posYp2 = 225;
 int sizeP2 = 75;
-//pelota
 int radio = 20;
 float posXpel = 200;
 float posYpel = 100;
 float vel = 2;
 float dirXpel = 1;
 float dirYpel = 1;
-//marcador
 int marcador = 0;
 int marcador2 = 0;
 int estado=0;
