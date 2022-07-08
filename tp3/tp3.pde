@@ -1,3 +1,5 @@
+//Huarte, Ezequiel Tiago
+//Legajo:91348/9
 int posXp1 = 10;
 int posYp1 = 225;
 int sizeP1 = 75;
@@ -39,7 +41,7 @@ if ( estado==6) {
   pelota();
   condicion();
   marcador();
-  Campo();
+  campo();
  } 
 }
 void mousePressed() {
@@ -114,8 +116,9 @@ if(marcador == 3){
   }
   if(posXpel + radio/2 <=  15 ){
   marcador2 += 1;
+
   }
- if(marcador2 == 3){
+  if(marcador2 == 3){
     fill(255);
     textSize(15);
     fill(255);
@@ -128,8 +131,8 @@ if(marcador == 3){
     posYpel = 250;
     text("toca cualquier tecla para reiniciar",250,325);
   }
- }
-void Campo(){
+}
+void campo(){
 stroke(255);
 line(250,0,250,500);
 noFill();
