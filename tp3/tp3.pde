@@ -129,7 +129,6 @@ if(marcador == 3){
     text(marcador,250,50);
     posXpel = 250;
     posYpel = 250;
-    text("toca cualquier tecla para reiniciar \n toque click para ver los creditos",250,325);
   }
 }
 void campo(){
