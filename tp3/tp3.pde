@@ -1,3 +1,5 @@
+Huarte, Ezequiel Tiago
+Legajo:91348/9
 int posXp1 = 10;
 int posYp1 = 225;
 int sizeP1 = 75;
@@ -14,7 +16,7 @@ int marcador = 0;
 int marcador2 = 0;
 int estado=0;
 String [] textos = {"PING-PONG","Instrucciones", 
-  " Jugador 1\n Presione W y S para subir y bajar", "Jugador 2\n Presione ↑ y ↓ para subir y bajar","El que hace 3 puntos primero gana"};
+  " Jugador 1\n Presione W y S para subir y bajar", "Jugador 2\n Presione ↑ y ↓ para subir y bajar","El que hace 3 puntos primero gana", "Creditos \n\n Huarte, Ezequiel Tiago \n Legajo:91348/9"};
 void setup() {
   size(500, 500);
 }
@@ -30,8 +32,10 @@ void draw() {
     pantallas(textos[3], width/2, height/2, 30 );
     } else if (estado==4) {
     pantallas(textos[4], width/2, height/2,25 );
+     } else if (estado==5) {
+    pantallas(textos[5], width/2, height/2,25 );
  }
-if ( estado==5) {
+if ( estado==6) {
   paleta1();
   paleta2();
   pelota();
@@ -133,9 +137,4 @@ stroke(255);
 line(250,0,250,500);
 noFill();
 ellipse(250,250,100,100);
-}
-{
-if ( estado==6) {
-  text("Huarte, Ezequiel Tiago \n Legajo:91348/9",250,325);
- }
 }
