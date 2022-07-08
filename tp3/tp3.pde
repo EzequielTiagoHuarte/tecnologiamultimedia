@@ -1,5 +1,5 @@
-Huarte, Ezequiel Tiago
-Legajo:91348/9
+//Huarte, Ezequiel Tiago
+//Legajo:91348/9
 int posXp1 = 10;
 int posYp1 = 225;
 int sizeP1 = 75;
