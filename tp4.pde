@@ -1,3 +1,6 @@
+Ezequiel Tiago Huarte
+91348/9
+
 Principal p;
 void setup() {
   size(700, 700);
