@@ -28,6 +28,6 @@ Principal(){
  }
 void click(){
   for(int i = 0; i < n; i++)
-    circles.add(new Circle(mouseX, mouseY, 20));
+    circles.add(new Circle(mouseX, mouseY, 15));
  }
 }
