@@ -1,18 +1,16 @@
 class Principal{
 ArrayList<Circle> circles;
-PImage img;
 int n;
 float s,x,y;
-efecto f;
+ PImage img;
 Circle c;
 Principal(){
+  img = loadImage("Bufon.png");
   n= 3500;
   circles = new ArrayList<Circle>();
-  img = loadImage("Br.png");
+  s=0;
   x=0;
-   y=0;
-    s=0;
-f=new efecto(s,x,y);
+  y=0;
 }
   void dibujo(){
   fill(0, 20);
@@ -21,10 +19,10 @@ f=new efecto(s,x,y);
   if(circles.size() > 0) {
     for(int i = 0; i < circles.size(); i++) {
       Circle c = circles.get(i);
-      c.c = img.get(int(c.pos.x), int(c.pos.y));
-      f.show();
-      f.move();
-      if(f.isDead()) circles.remove(i);
+        c.c = img.get(int(c.pos.x), int(c.pos.y));
+      c.show();
+      c.move();
+      if(c.isDead()) circles.remove(i);
     }
   }
  }
