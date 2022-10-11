@@ -5,7 +5,7 @@ float s,x,y;
  PImage img;
 Circle c;
 Principal(){
-  img = loadImage("Bufon.png");
+  img = loadImage("Br.png");
   n= 3500;
   circles = new ArrayList<Circle>();
   s=0;
