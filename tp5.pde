@@ -1,3 +1,11 @@
+//****************************************************************************************
+
+//Nota
+//-Al parecer estoy teniendo problemas con el comando "class", necesito repasar eso porque estoy mas que seguro que hay un comando que no estoy poniendo y tambien sacarme dudas.
+// Ésto es el prototipo de lo que tengo pensado con algunas anotaciones más.
+
+//****************************************************************************************
+
 //tp5 - Ezequiel Tiago Huarte
 //Halloween Case
 //Historia / contexto
@@ -8,7 +16,7 @@
 */
 //Actualizaciones(No decidido por el momento):
 /*
-- FUNDAMENTAL agregar clases, pantalla de inicio (Anotación para no olvidarme) 
+- FUNDAMENTAL agregar clases, pantalla de inicio (Anotación para no olvidarme).
 - Poner objetos sobre el mapa que tendrá que conseguir el jugador (Tengo pensado que el jugador, que sería el detective, encuentre huesos en el laberito, 
   si consigue todos gana el juego)(Estaría bueno que aparezcan de forma aleatoria).
 - Cambiar el color del laberito por imagenes (Es decir, al suelo ponerle una imagen de tablas de madera, para dar la sensación de que estas dentro de un edificio).
@@ -31,7 +39,6 @@
  - Reset: R
  */
 
-//****************************************************************************************
 //Variables:
 
 //Jugador
@@ -71,7 +78,6 @@ float highScore = 0;
 //Reset
 boolean reset = false;
 
-//****************************************************************************************
 void setup() {
   size(800, 800);
   //Pos. Inicio
@@ -85,7 +91,7 @@ void setup() {
     speedY[n] = random(-1.5, 1.5);
   }
 }
-//****************************************************************************************
+
 void draw() {
   background(LCol);
   //Visión
@@ -116,7 +122,7 @@ void draw() {
   //Ganar
   Ganar();
  }
-//****************************************************************************************
+
 void exitGate() {
   if (px > width-150 && py > height-100) {
     strokeWeight(6);
