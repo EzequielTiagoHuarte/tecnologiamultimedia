@@ -11,8 +11,8 @@ PImage Fotito;
 //Texto [] textos = new Texto [3]; //Agregarle a todo aquello que presice texto 
 
   Principal() {
-  paleta1 = new Tenista(1);
-  paleta2 = new Tenista(2);
+  paleta1 = new Tenista(1); //Guillermo Vilas
+  paleta2 = new Tenista(2); //Brian Gottfried
   pelota = new Pelota(1);
   MaxScore = 5;
   win = false;
