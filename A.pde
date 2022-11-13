@@ -10,22 +10,24 @@ class Tenista {
     ancho = 20; 
     alto = 150; 
     puntos = 0; 
-    
+  //Guillermo Vilas  
     if(paleta == 1) {
       pos = new PVector(ancho/2, height/2);
+  //Brian Gottfried
     } else if(paleta == 2) {
       pos = new PVector(width - ancho/2, height/2);
-    }
+    } 
     vel = new PVector(0,5);
   }
   void mover() {
+  //Guillermo Vilas
     if(paleta == 1 && key == 'w') {
       pos.sub(vel);
     } 
     else if(paleta == 1 && key == 's') {
       pos.add(vel);
     }
-    
+   //Brian Gottfried
     if(paleta == 2 && keyCode == UP) {
       pos.sub(vel);
     } 
