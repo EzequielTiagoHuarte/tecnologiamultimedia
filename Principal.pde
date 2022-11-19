@@ -14,7 +14,7 @@ PImage Fotito;
   paleta1 = new Tenista(1); //Guillermo Vilas
   paleta2 = new Tenista(2); //Brian Gottfried
   pelota = new Pelota(1);
-  MaxScore = 5; //Maximo puntaje
+  MaxScore = 3; //Maximo puntaje
   win = false; //Si no llegan al maximo puntaje sigue el partido
 }
 
