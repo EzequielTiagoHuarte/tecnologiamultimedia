@@ -1,3 +1,5 @@
+import processing.sound.*;
+SoundFile Music;
 /*La nueva idea que tuve fue retomar el juego de ping pong del tp3 y ambientarlo en el Torneo de Roland Garros 1977, especificamente el partido entre Guillermo Vilas 
 y  Brian Gottfried.*/
 /*Me falta agregarle objetos (que tengo pensado usar textos) y las pantallas de inicio, instrucciones y creditos (que anduve probando y digamos que funcionó, 
@@ -8,6 +10,9 @@ Principal p;
 void setup() {
    size(1080,600);
   p = new Principal();
+  Music= new SoundFile (this, "music8bits.mp3");
+Music.loop();
+Music.amp(0.5);
 }
 void draw() {
   background(0);
