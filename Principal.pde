@@ -5,14 +5,11 @@ Pelota pelota;
 int pantalla;
 boolean win;
 int MaxScore;
-int estado=0;
 float tam, x, y;
 PImage Foto;
 PImage Fotito;
-float [] PX = new float [4];
-  float [] PY = new float [3];
-//Texto [] textos = new Texto [3]; //Agregarle a todo aquello que presice texto 
-Texto [] txt = new Texto [3];
+PFont fuente;
+Texto [] frase = new Texto [3];
   Principal() {
   paleta1 = new Tenista(1); //Guillermo Vilas
   paleta2 = new Tenista(2); //Brian Gottfried
@@ -20,26 +17,32 @@ Texto [] txt = new Texto [3];
   MaxScore =3; //Maximo puntaje
   win = false; //Si no llegan al maximo puntaje sigue el partido
   pantalla = 0;
+  fuente = createFont("ArcadeClassic.ttf",30);
+  frase[0] = new Texto(fuente, 50, 0, CENTER);
+  frase[1] = new Texto(fuente, 60, 0, CENTER);
+  frase[2] = new Texto(fuente, 70, 0, CENTER);
 }
 
   void display() {
     if (pantalla == 0) {
-      txt[0].txt("¡Ping Pong!", PX[0], PY[0] - height/3);
+      background(255,255,0);
+      frase[0].textos("PingPong!", width/2, height/2);
     }
     if (pantalla == 1) {
-      txt[1].txt("¡Instrucciones!", PX[0], PY[0] - height/3);
-      txt[0].txt(" Jugador 1\n Presione W y S para subir y bajar", PX[0], PY[0] - height/3);
-    }
-    if (pantalla == 2) {
-      txt[0].txt(" Jugador 2\n Presione ↑ y ↓ para subir y bajar", PX[0], PY[0] - height/3);
-    }
+      frase[1].textos("¡Instrucciones!", width/2, height/2);
+      if (pantalla == 2) {
+      frase[0].textos(" Jugador 1\n Presione W y S para subir y bajar", width/2, height/2);
+    } 
     if (pantalla == 3) {
-      txt[0].txt("El que hace 3 puntos primero gana", PX[0], PY[0] - height/3);
+      frase[0].textos(" Jugador 2\n Presione ↑ y ↓ para subir y bajar", width/2, height/2);
     }
-      if (pantalla == 4) {
-        txt[2].txt("Creditos \n\n Huarte, Ezequiel Tiago \n Legajo:91348/9", PX[0], PY[0] - height/3);
+    if (pantalla == 4) {
+      frase[0].textos("El que hace 3 puntos primero gana", width/2, height/2);
+    }
+      if (pantalla == 5) {
+        frase[2].textos("Creditos \n\n Huarte, Ezequiel Tiago \n Legajo:91348/9", width/2, height/2);
       }
-            if (pantalla == 5) {
+            if (pantalla == 6) {
   textSize(30);
   text(paleta1.reinicioScore(), width/2 - 60, 40);
   text(paleta2.reinicioScore(), width/2 + 40, 40);
@@ -68,9 +71,7 @@ Texto [] txt = new Texto [3];
   win();
  }
 }
-void mousePressed() {
-  estado ++;
-}
+  }
 void score() {
   PVector pelotaPos = pelota.reinicioPos();
   if(pelotaPos.x > width && paleta1.reinicioScore() <= MaxScore) {
