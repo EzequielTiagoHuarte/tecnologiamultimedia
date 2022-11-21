@@ -3,7 +3,7 @@ class Boton{
   int a, d;
   float px, py, anc, alt;
 
-  Boton(float px, float py, float anc, float alt) {//constructor txt
+  Boton(float px, float py, float anc, float alt) {
     this.px = px;
     this.py = py;
     this.anc = anc;
