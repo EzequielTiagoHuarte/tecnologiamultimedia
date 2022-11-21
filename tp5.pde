@@ -5,16 +5,19 @@ y  Brian Gottfried.*/
 /*Me falta agregarle objetos (que tengo pensado usar textos) y las pantallas de inicio, instrucciones y creditos (que anduve probando y digamos que funcionó, 
 pero igual tengo que solucionarlo por hay veces que no responde)*/
 //Bug: A veces no responden las paletas pero pasa muy pocas veces, para solucionarlo solamente tiene que cerrar el juego y abrirlo de nuevo.
-//Nota: Está hecho a base del comando PVector que me sirve para la posición, la velocidad y la aceleración tanto de las paletas como de la pelota
 Principal p;
 void setup() {
-   size(1080,600);
-  p = new Principal();
-  Music= new SoundFile (this, "music8bits.mp3");
+size(1080,600);
+p = new Principal();
+Music= new SoundFile (this, "music8bits.mp3");
 Music.loop();
-Music.amp(0.5);
+Music.amp(0.3);
+
 }
 void draw() {
   background(0);
   p. display();
+}
+void mousePressed() {
+p.interacion();
 }
