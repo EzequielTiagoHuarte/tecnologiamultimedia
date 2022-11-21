@@ -11,8 +11,10 @@ PImage Fotito;
 PImage Copa;
 PImage R;
 PImage A;
+PImage D;
+PImage I;
 PFont fuente;
-Texto [] frase = new Texto [3];
+Texto [] frase = new Texto [4];
  Boton [] Cambio = new Boton [6];
   Principal() {
   paleta1 = new Tenista(1); //Guillermo Vilas
@@ -22,17 +24,23 @@ Texto [] frase = new Texto [3];
   win = false; //Si no llegan al maximo puntaje sigue el partido
   pantalla = 0;
   fuente = createFont("ArcadeClassic.ttf",30);
-  frase[0] = new Texto(fuente, 50, 255, CENTER);
-  frase[1] = new Texto(fuente, 60, 255, CENTER);
-  frase[2] = new Texto(fuente, 70, 255, CENTER);
   Foto=loadImage("Guillermo Vilas 150x150.png");
   Fotito=loadImage("Brian Gottfried 150x150.png");
+  D=loadImage("Guillermo Vilas 150x150.png");
+  I=loadImage("Brian Gottfried 150x150.png");
   Copa=loadImage("copa.png");
   A=loadImage("paleta1.png");
   R=loadImage("paleta2.png");
-   Cambio[0] = new Boton (460,460,150,50);
-   Cambio[1] = new Boton (460,460,150,50);
-   Cambio[2] = new Boton (460,460,150,50);
+  frase[0] = new Texto(fuente, 50, 255, CENTER);
+  frase[1] = new Texto(fuente, 60, 255, CENTER);
+  frase[2] = new Texto(fuente, 70, 255, CENTER);
+    frase[3] = new Texto(fuente, 30, 255, CENTER);
+   Cambio[0] = new Boton (460,460,width/7,height/15);
+   Cambio[1] = new Boton (460,460,width/7,height/15);
+   Cambio[2] = new Boton (460,460,width/7,height/15);
+   Cambio[3] = new Boton (460,460,width/7,height/15);
+   Cambio[4] = new Boton (460,460,width/7,height/15);
+   Cambio[5] = new Boton (460,460,width/7,height/15);
 }
 
   void display() {
@@ -45,22 +53,22 @@ Texto [] frase = new Texto [3];
       Cambio[0].Dibujin(0, 1);
     }
     if (pantalla == 1) {
-      frase[1].textos("¡Instrucciones!", width/2, height/2);
+      frase[2].textos("Instrucciones!", width/2, 120);
+      frase[3].textos("Jugador de la izquierda\n w y s ", width/2, 210);
+      frase[3].textos("Jugador de la derecha\n flecha arriba y flecha abajo ", width/2, 320);
+       image(I,800,225);
+        image(D,100,225);
       Cambio[1].Dibujin(1, 2);
+    }
       if (pantalla == 2) {
-      frase[0].textos(" Jugador 1\n Presione W y S para subir y bajar", width/2, height/2);
+      frase[1].textos("El que hace 3 puntos primero gana!", width/2, height/2);
        Cambio[2].Dibujin(2, 3);
-    } 
-    if (pantalla == 3) {
-      frase[0].textos(" Jugador 2\n Presione ↑ y ↓ para subir y bajar", width/2, height/2);
     }
-    if (pantalla == 4) {
-      frase[0].textos("El que hace 3 puntos primero gana", width/2, height/2);
+      if (pantalla == 3) {
+        frase[0].textos("Creditos \n Huarte, Ezequiel Tiago \n Legajo:91348/9", 540, 200);
+        Cambio[5].Dibujin(3, 4);
     }
-      if (pantalla == 5) {
-        frase[2].textos("Creditos \n\n Huarte, Ezequiel Tiago \n Legajo:91348/9", width/2, height/2);
-      }
-            if (pantalla == 6) {
+      if (pantalla == 4) {
   textSize(30);
   text(paleta1.reinicioScore(), width/2 - 60, 40);
   text(paleta2.reinicioScore(), width/2 + 40, 40);
@@ -89,7 +97,6 @@ Texto [] frase = new Texto [3];
   win();
  }
 }
- }
 void score() {
   PVector pelotaPos = pelota.reinicioPos();
   if(pelotaPos.x > width && paleta1.reinicioScore() <= MaxScore) {
@@ -106,14 +113,12 @@ void score() {
 }
 void win() {
   if(paleta1.reinicioScore() == MaxScore) {
-    
     image(Foto,465,250);
-    text("Guillermo Vilas ha ganado la partida", 300, 450);
+    text("Guillermo Vilas ha ganado la partida", 300, 450, CENTER);
     textSize(20);
     text("Presione cualquier tecla para volver a jugar", 345, 500, CENTER);
     win = true;
   } else if(paleta2.reinicioScore() == MaxScore) {
-    
     image(Fotito,465,250);
     text("Brian Gottfried ha ganado la partida", 300, 450);
     textSize(20);
@@ -122,14 +127,23 @@ void win() {
   }
  }
  void interacion() {
-    if (Cambio[0].Clic(460,460,150,50) && pantalla == Cambio[0].a) {
+    if (Cambio[0].Clic(460,460,width/7,height/15) && pantalla == Cambio[0].a) {
       pantalla = Cambio[0].d;
     }
-    if (Cambio[1].Clic(460,460,150,50) && pantalla == Cambio[1].a) {
+    if (Cambio[1].Clic(460,460,width/7,height/15) && pantalla == Cambio[1].a) {
       pantalla = Cambio[1].d;
     }
-    if (Cambio[2].Clic(460,460,150,50) && pantalla == Cambio[2].a) {
+    if (Cambio[2].Clic(460,460,width/7,height/15) && pantalla == Cambio[2].a) {
       pantalla = Cambio[2].d;
    }
+       if (Cambio[3].Clic(460,460,width/7,height/15) && pantalla == Cambio[3].a) {
+      pantalla = Cambio[3].d;
+   }
+       if (Cambio[4].Clic(460,460,width/7,height/15) && pantalla == Cambio[4].a) {
+      pantalla = Cambio[4].d;
+   }
+       if (Cambio[5].Clic(460,460,width/7,height/15) && pantalla == Cambio[5].a) {
+      pantalla = Cambio[5].d;
+   }
+  }
  }
-}
