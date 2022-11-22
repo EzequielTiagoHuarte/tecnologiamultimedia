@@ -2,7 +2,7 @@
 SoundFile Music;
 /*
 Bugs: -La musica se suporpone.
-      -El boton se corre para un constao cuando se reinicia
+      -El boton se corre para un constado cuando se reinicia
 .*/
 Principal p;
 void setup() {
