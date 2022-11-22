@@ -15,13 +15,12 @@ class Pelota {
   }
   
   void pelota() {
-    fill(255);
+    fill(173,196,20);
     noStroke();
     ellipse(pos.x, pos.y, 20,20);
   }
   
   void reboteT1 (PVector posTenista) {
-
     float min = posTenista.y - alto/2;
     
     float max = posTenista.y + alto/2;
@@ -32,7 +31,6 @@ class Pelota {
   }
   
   void reboteT2 (PVector TenistaPos) {
-
     float min = TenistaPos.y - alto/2;
     
     float max = TenistaPos.y + alto/2;
@@ -43,7 +41,6 @@ class Pelota {
   }
   
   void reboteP() {
-
     if(pos.y > height) {
       vel.y *= -1;
     } else if(pos.y < 0) {
