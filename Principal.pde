@@ -17,11 +17,11 @@ PFont fuente;
 Texto [] frase = new Texto [4];
  Boton [] Cambio = new Boton [6];
   Principal() {
-  paleta1 = new Tenista(1); //Guillermo Vilas
-  paleta2 = new Tenista(2); //Brian Gottfried
+  paleta1 = new Tenista(1); 
+  paleta2 = new Tenista(2);
   pelota = new Pelota(1);
-  MaxScore =3; //Maximo puntaje
-  win = false; //Si no llegan al maximo puntaje sigue el partido
+  MaxScore =3;
+  win = false;
   pantalla = 0;
   fuente = createFont("ArcadeClassic.ttf",30);
   Foto=loadImage("Guillermo Vilas 150x150.png");
@@ -57,7 +57,7 @@ Texto [] frase = new Texto [4];
       frase[3].textos("Jugador de la izquierda\n w y s ", width/2, 210);
       frase[3].textos("Jugador de la derecha\n flecha arriba y flecha abajo ", width/2, 320);
        image(I,800,225);
-        image(D,100,225);
+        image(D,125,225);
       Cambio[1].Dibujin(1, 2);
     }
       if (pantalla == 2) {
@@ -114,15 +114,15 @@ void score() {
 void win() {
   if(paleta1.reinicioScore() == MaxScore) {
     image(Foto,465,250);
-    text("Guillermo Vilas ha ganado la partida", 300, 450, CENTER);
+    text("Guillermo Vilas ha ganado la partida", 560, 450);
     textSize(20);
-    text("Presione cualquier tecla para volver a jugar", 345, 500, CENTER);
+    text("Presione cualquier tecla para volver a jugar", 555, 500);
     win = true;
   } else if(paleta2.reinicioScore() == MaxScore) {
     image(Fotito,465,250);
-    text("Brian Gottfried ha ganado la partida", 300, 450);
+    text("Brian Gottfried ha ganado la partida", 560, 450);
     textSize(20);
-    text("Presione cualquier tecla para volver a jugar", 345, 500, CENTER);
+    text("Presione cualquier tecla para volver a jugar", 555, 500);
     win = true;
   }
  }
