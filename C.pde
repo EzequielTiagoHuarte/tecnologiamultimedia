@@ -3,13 +3,13 @@ class Texto {
   float tam;
   color C;
   int aling;
-  Texto(PFont fuente, float tam, color C, int aling) {
+  Texto(PFont fuente, float tam, color C, int aling) {//detro del constructor, parametros para luego reemplazalos
     this.fuente = fuente; 
     this.tam = tam;
     this.C = C;
     this.aling = aling;
   }
-  void txt(String Love, float x, float y) {
+  void textos(String Love, float x, float y) {
     fill(C);
     textFont(fuente);
     textSize(tam);
