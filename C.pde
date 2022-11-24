@@ -3,7 +3,7 @@ class Texto {
   float tam;
   color C;
   int aling;
-  Texto(PFont fuente, float tam, color C, int aling) {//detro del constructor, parametros para luego reemplazalos
+  Texto(PFont fuente, float tam, color C, int aling) {
     this.fuente = fuente; 
     this.tam = tam;
     this.C = C;
