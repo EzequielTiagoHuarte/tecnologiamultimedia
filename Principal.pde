@@ -68,11 +68,11 @@ class Principal {
       Cambio[5].Dibujin(3, 4);
     }
     if (pantalla == 4) {
-      //Puntuación
+
       textSize(30);
       text(paleta1.reinicioScore(), width/2 - 60, 40);
       text(paleta2.reinicioScore(), width/2 + 40, 40);
-      //Escenario
+
       if (win == false) {
         strokeWeight(2);
         stroke(255);
